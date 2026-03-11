@@ -65,6 +65,7 @@ class WhatsAppBot:
             print("-" * 50)
             
             self.loop.run_until_complete(self.client.connect())
+            self.loop.run_until_complete(self.client.idle())
             
         except Exception as e:
             print(f"❌ Bot connection error: {e}")
